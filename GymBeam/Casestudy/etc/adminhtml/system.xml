@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="casestudy_section" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Greeting</label>
+            <tab>general</tab>
+            <resource>GymBeam_Casestudy::config_casestudy</resource>
+            <group id="casestudy_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Greeting Configuration</label>
+                <field id="greeting_message" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Greeting Message</label>
+                    <comment>Enter the greeting message to be displayed.
+                    After saving flush Magento cache.</comment>
+                    <frontend_class>validate-length maximum-length-50</frontend_class>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
